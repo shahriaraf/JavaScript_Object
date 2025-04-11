@@ -45,11 +45,18 @@ console.log(person);
 function createUser(name, age){
     return{
         name,
-        age
+        age,
+        greet(){
+            console.log(this.name)
+        }
     }
 }
 
 const user1 = createUser("Bob", 39);
 console.log(user1);
+user1.name;
+user1.age;
+user1.greet();
+
 const user2 = createUser("John", 30);
 console.log(user2);
