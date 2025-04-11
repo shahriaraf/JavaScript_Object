@@ -23,10 +23,33 @@ const someKey = "is Married";
 
 console.log(user[someKey]);
 
-let car = prompt("Which is your fav car?");
 
-let favCar = {
-    [car]: 5,
+// Constructor Function
+function Car(name, model){
+    this.name = name;
+    this.model = model;
 }
 
-console.log(favCar);
+const bmwCar = new Car('BMW', "X1");
+console.log(bmwCar);
+
+console.log(bmwCar instanceof Car);
+
+const person = new Object()
+person.name = "Araf";
+person.age = 24;
+console.log(person);
+
+
+// Factory Function
+function createUser(name, age){
+    return{
+        name,
+        age
+    }
+}
+
+const user1 = createUser("Bob", 39);
+console.log(user1);
+const user2 = createUser("John", 30);
+console.log(user2);
